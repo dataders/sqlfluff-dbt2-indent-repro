@@ -1,0 +1,181 @@
+{
+  "protocol_version": 2,
+  "dbt_version": "2.0.12+experimental.trace",
+  "invocation_id": "synthetic-normalized-direct_coalesce-2",
+  "unique_id": "model.indent_probe.direct_coalesce",
+  "filename": "models/direct_coalesce.sql",
+  "source_path": "models/direct_coalesce.sql",
+  "render_stage": "jinja_before_ephemeral_injection",
+  "source": "SELECT\n    COALESCE(\n        {% for value in [1, 2] %}\n            {{ value }}{% if not loop.last %},{% endif %}\n        {% endfor %}\n    ) AS a\n",
+  "rendered": "SELECT\n    COALESCE(\n        \n            1,\n        \n            2\n        \n    ) AS a",
+  "events": [
+    {
+      "kind": "literal",
+      "source_start": 0,
+      "source_end": 29,
+      "rendered_start": 0,
+      "rendered_end": 29
+    },
+    {
+      "kind": "block_start",
+      "source_start": 29,
+      "source_end": 54,
+      "rendered_start": 29,
+      "rendered_end": 29
+    },
+    {
+      "kind": "literal",
+      "source_start": 54,
+      "source_end": 67,
+      "rendered_start": 29,
+      "rendered_end": 42
+    },
+    {
+      "kind": "variable",
+      "source_start": 67,
+      "source_end": 78,
+      "rendered_start": 42,
+      "rendered_end": 42
+    },
+    {
+      "kind": "templated",
+      "source_start": 67,
+      "source_end": 78,
+      "rendered_start": 42,
+      "rendered_end": 43
+    },
+    {
+      "kind": "macro",
+      "source_start": 67,
+      "source_end": 78,
+      "rendered_start": 42,
+      "rendered_end": 43
+    },
+    {
+      "kind": "block_start",
+      "source_start": 78,
+      "source_end": 100,
+      "rendered_start": 43,
+      "rendered_end": 43
+    },
+    {
+      "kind": "literal",
+      "source_start": 100,
+      "source_end": 101,
+      "rendered_start": 43,
+      "rendered_end": 44
+    },
+    {
+      "kind": "block_end",
+      "source_start": 101,
+      "source_end": 112,
+      "rendered_start": 44,
+      "rendered_end": 44
+    },
+    {
+      "kind": "macro",
+      "source_start": 78,
+      "source_end": 112,
+      "rendered_start": 43,
+      "rendered_end": 44
+    },
+    {
+      "kind": "literal",
+      "source_start": 112,
+      "source_end": 121,
+      "rendered_start": 44,
+      "rendered_end": 53
+    },
+    {
+      "kind": "block_end",
+      "source_start": 121,
+      "source_end": 133,
+      "rendered_start": 53,
+      "rendered_end": 53
+    },
+    {
+      "kind": "loop_iteration",
+      "source_start": 29,
+      "source_end": 54,
+      "rendered_start": 53,
+      "rendered_end": 53
+    },
+    {
+      "kind": "literal",
+      "source_start": 54,
+      "source_end": 67,
+      "rendered_start": 53,
+      "rendered_end": 66
+    },
+    {
+      "kind": "variable",
+      "source_start": 67,
+      "source_end": 78,
+      "rendered_start": 66,
+      "rendered_end": 66
+    },
+    {
+      "kind": "templated",
+      "source_start": 67,
+      "source_end": 78,
+      "rendered_start": 66,
+      "rendered_end": 67
+    },
+    {
+      "kind": "macro",
+      "source_start": 67,
+      "source_end": 78,
+      "rendered_start": 66,
+      "rendered_end": 67
+    },
+    {
+      "kind": "block_start",
+      "source_start": 78,
+      "source_end": 100,
+      "rendered_start": 67,
+      "rendered_end": 67
+    },
+    {
+      "kind": "block_end",
+      "source_start": 101,
+      "source_end": 112,
+      "rendered_start": 67,
+      "rendered_end": 67
+    },
+    {
+      "kind": "macro",
+      "source_start": 78,
+      "source_end": 112,
+      "rendered_start": 67,
+      "rendered_end": 67
+    },
+    {
+      "kind": "literal",
+      "source_start": 112,
+      "source_end": 121,
+      "rendered_start": 67,
+      "rendered_end": 76
+    },
+    {
+      "kind": "block_end",
+      "source_start": 121,
+      "source_end": 133,
+      "rendered_start": 76,
+      "rendered_end": 76
+    },
+    {
+      "kind": "macro",
+      "source_start": 29,
+      "source_end": 133,
+      "rendered_start": 29,
+      "rendered_end": 76
+    },
+    {
+      "kind": "literal",
+      "source_start": 133,
+      "source_end": 144,
+      "rendered_start": 76,
+      "rendered_end": 87
+    }
+  ]
+}

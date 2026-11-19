@@ -1,0 +1,10 @@
+[project]
+name = "sqlfluff-dbt2-indent-repro"
+version = "0.1.0"
+description = "Synthetic reproduction of repeated-loop indentation cycling in SQLFluff's dbt2 adapter"
+requires-python = ">=3.12"
+dependencies = ["sqlfluff==4.5.0", "sqlfluff-templater-dbt2==4.5.0", "pytest>=8,<10"]
+
+[tool.uv.sources]
+sqlfluff = { git = "https://github.com/dataders/sqlfluff.git", rev = "907eb031eab029a4f62fc9074fbe39193bfa967e" }
+sqlfluff-templater-dbt2 = { git = "https://github.com/dataders/sqlfluff.git", rev = "907eb031eab029a4f62fc9074fbe39193bfa967e", subdirectory = "plugins/sqlfluff-templater-dbt2" }

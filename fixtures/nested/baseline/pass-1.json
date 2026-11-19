@@ -1,0 +1,496 @@
+{
+  "protocol_version": 2,
+  "dbt_version": "2.0.12+experimental.trace",
+  "invocation_id": "synthetic-baseline-nested-1",
+  "unique_id": "model.indent_probe.nested",
+  "filename": "models/nested.sql",
+  "source_path": "models/nested.sql",
+  "render_stage": "jinja_before_ephemeral_injection",
+  "source": "SELECT\n    {% for column in ['a', 'b'] %}\n    COALESCE(\n        {% for value in [1, 2] %}\n        {{ value }}{% if not loop.last %},{% endif %}\n        {% endfor %}\n    ) AS {{ column }}{% if not loop.last %},{% endif %}\n    {% endfor %}\n",
+  "rendered": "SELECT\n    \n    COALESCE(\n        \n        1,\n        \n        2\n        \n    ) AS a,\n    \n    COALESCE(\n        \n        1,\n        \n        2\n        \n    ) AS b\n    ",
+  "events": [
+    {
+      "kind": "literal",
+      "source_start": 0,
+      "source_end": 11,
+      "rendered_start": 0,
+      "rendered_end": 11
+    },
+    {
+      "kind": "block_start",
+      "source_start": 11,
+      "source_end": 41,
+      "rendered_start": 11,
+      "rendered_end": 11
+    },
+    {
+      "kind": "literal",
+      "source_start": 41,
+      "source_end": 64,
+      "rendered_start": 11,
+      "rendered_end": 34
+    },
+    {
+      "kind": "block_start",
+      "source_start": 64,
+      "source_end": 89,
+      "rendered_start": 34,
+      "rendered_end": 34
+    },
+    {
+      "kind": "literal",
+      "source_start": 89,
+      "source_end": 98,
+      "rendered_start": 34,
+      "rendered_end": 43
+    },
+    {
+      "kind": "variable",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 43,
+      "rendered_end": 43
+    },
+    {
+      "kind": "templated",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 43,
+      "rendered_end": 44
+    },
+    {
+      "kind": "macro",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 43,
+      "rendered_end": 44
+    },
+    {
+      "kind": "block_start",
+      "source_start": 109,
+      "source_end": 131,
+      "rendered_start": 44,
+      "rendered_end": 44
+    },
+    {
+      "kind": "literal",
+      "source_start": 131,
+      "source_end": 132,
+      "rendered_start": 44,
+      "rendered_end": 45
+    },
+    {
+      "kind": "block_end",
+      "source_start": 132,
+      "source_end": 143,
+      "rendered_start": 45,
+      "rendered_end": 45
+    },
+    {
+      "kind": "macro",
+      "source_start": 109,
+      "source_end": 143,
+      "rendered_start": 44,
+      "rendered_end": 45
+    },
+    {
+      "kind": "literal",
+      "source_start": 143,
+      "source_end": 152,
+      "rendered_start": 45,
+      "rendered_end": 54
+    },
+    {
+      "kind": "block_end",
+      "source_start": 152,
+      "source_end": 164,
+      "rendered_start": 54,
+      "rendered_end": 54
+    },
+    {
+      "kind": "loop_iteration",
+      "source_start": 64,
+      "source_end": 89,
+      "rendered_start": 54,
+      "rendered_end": 54
+    },
+    {
+      "kind": "literal",
+      "source_start": 89,
+      "source_end": 98,
+      "rendered_start": 54,
+      "rendered_end": 63
+    },
+    {
+      "kind": "variable",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 63,
+      "rendered_end": 63
+    },
+    {
+      "kind": "templated",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 63,
+      "rendered_end": 64
+    },
+    {
+      "kind": "macro",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 63,
+      "rendered_end": 64
+    },
+    {
+      "kind": "block_start",
+      "source_start": 109,
+      "source_end": 131,
+      "rendered_start": 64,
+      "rendered_end": 64
+    },
+    {
+      "kind": "block_end",
+      "source_start": 132,
+      "source_end": 143,
+      "rendered_start": 64,
+      "rendered_end": 64
+    },
+    {
+      "kind": "macro",
+      "source_start": 109,
+      "source_end": 143,
+      "rendered_start": 64,
+      "rendered_end": 64
+    },
+    {
+      "kind": "literal",
+      "source_start": 143,
+      "source_end": 152,
+      "rendered_start": 64,
+      "rendered_end": 73
+    },
+    {
+      "kind": "block_end",
+      "source_start": 152,
+      "source_end": 164,
+      "rendered_start": 73,
+      "rendered_end": 73
+    },
+    {
+      "kind": "macro",
+      "source_start": 64,
+      "source_end": 164,
+      "rendered_start": 34,
+      "rendered_end": 73
+    },
+    {
+      "kind": "literal",
+      "source_start": 164,
+      "source_end": 174,
+      "rendered_start": 73,
+      "rendered_end": 83
+    },
+    {
+      "kind": "variable",
+      "source_start": 174,
+      "source_end": 186,
+      "rendered_start": 83,
+      "rendered_end": 83
+    },
+    {
+      "kind": "templated",
+      "source_start": 174,
+      "source_end": 186,
+      "rendered_start": 83,
+      "rendered_end": 84
+    },
+    {
+      "kind": "macro",
+      "source_start": 174,
+      "source_end": 186,
+      "rendered_start": 83,
+      "rendered_end": 84
+    },
+    {
+      "kind": "block_start",
+      "source_start": 186,
+      "source_end": 208,
+      "rendered_start": 84,
+      "rendered_end": 84
+    },
+    {
+      "kind": "literal",
+      "source_start": 208,
+      "source_end": 209,
+      "rendered_start": 84,
+      "rendered_end": 85
+    },
+    {
+      "kind": "block_end",
+      "source_start": 209,
+      "source_end": 220,
+      "rendered_start": 85,
+      "rendered_end": 85
+    },
+    {
+      "kind": "macro",
+      "source_start": 186,
+      "source_end": 220,
+      "rendered_start": 84,
+      "rendered_end": 85
+    },
+    {
+      "kind": "literal",
+      "source_start": 220,
+      "source_end": 225,
+      "rendered_start": 85,
+      "rendered_end": 90
+    },
+    {
+      "kind": "block_end",
+      "source_start": 225,
+      "source_end": 237,
+      "rendered_start": 90,
+      "rendered_end": 90
+    },
+    {
+      "kind": "loop_iteration",
+      "source_start": 11,
+      "source_end": 41,
+      "rendered_start": 90,
+      "rendered_end": 90
+    },
+    {
+      "kind": "literal",
+      "source_start": 41,
+      "source_end": 64,
+      "rendered_start": 90,
+      "rendered_end": 113
+    },
+    {
+      "kind": "block_start",
+      "source_start": 64,
+      "source_end": 89,
+      "rendered_start": 113,
+      "rendered_end": 113
+    },
+    {
+      "kind": "literal",
+      "source_start": 89,
+      "source_end": 98,
+      "rendered_start": 113,
+      "rendered_end": 122
+    },
+    {
+      "kind": "variable",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 122,
+      "rendered_end": 122
+    },
+    {
+      "kind": "templated",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 122,
+      "rendered_end": 123
+    },
+    {
+      "kind": "macro",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 122,
+      "rendered_end": 123
+    },
+    {
+      "kind": "block_start",
+      "source_start": 109,
+      "source_end": 131,
+      "rendered_start": 123,
+      "rendered_end": 123
+    },
+    {
+      "kind": "literal",
+      "source_start": 131,
+      "source_end": 132,
+      "rendered_start": 123,
+      "rendered_end": 124
+    },
+    {
+      "kind": "block_end",
+      "source_start": 132,
+      "source_end": 143,
+      "rendered_start": 124,
+      "rendered_end": 124
+    },
+    {
+      "kind": "macro",
+      "source_start": 109,
+      "source_end": 143,
+      "rendered_start": 123,
+      "rendered_end": 124
+    },
+    {
+      "kind": "literal",
+      "source_start": 143,
+      "source_end": 152,
+      "rendered_start": 124,
+      "rendered_end": 133
+    },
+    {
+      "kind": "block_end",
+      "source_start": 152,
+      "source_end": 164,
+      "rendered_start": 133,
+      "rendered_end": 133
+    },
+    {
+      "kind": "loop_iteration",
+      "source_start": 64,
+      "source_end": 89,
+      "rendered_start": 133,
+      "rendered_end": 133
+    },
+    {
+      "kind": "literal",
+      "source_start": 89,
+      "source_end": 98,
+      "rendered_start": 133,
+      "rendered_end": 142
+    },
+    {
+      "kind": "variable",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 142,
+      "rendered_end": 142
+    },
+    {
+      "kind": "templated",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 142,
+      "rendered_end": 143
+    },
+    {
+      "kind": "macro",
+      "source_start": 98,
+      "source_end": 109,
+      "rendered_start": 142,
+      "rendered_end": 143
+    },
+    {
+      "kind": "block_start",
+      "source_start": 109,
+      "source_end": 131,
+      "rendered_start": 143,
+      "rendered_end": 143
+    },
+    {
+      "kind": "block_end",
+      "source_start": 132,
+      "source_end": 143,
+      "rendered_start": 143,
+      "rendered_end": 143
+    },
+    {
+      "kind": "macro",
+      "source_start": 109,
+      "source_end": 143,
+      "rendered_start": 143,
+      "rendered_end": 143
+    },
+    {
+      "kind": "literal",
+      "source_start": 143,
+      "source_end": 152,
+      "rendered_start": 143,
+      "rendered_end": 152
+    },
+    {
+      "kind": "block_end",
+      "source_start": 152,
+      "source_end": 164,
+      "rendered_start": 152,
+      "rendered_end": 152
+    },
+    {
+      "kind": "macro",
+      "source_start": 64,
+      "source_end": 164,
+      "rendered_start": 113,
+      "rendered_end": 152
+    },
+    {
+      "kind": "literal",
+      "source_start": 164,
+      "source_end": 174,
+      "rendered_start": 152,
+      "rendered_end": 162
+    },
+    {
+      "kind": "variable",
+      "source_start": 174,
+      "source_end": 186,
+      "rendered_start": 162,
+      "rendered_end": 162
+    },
+    {
+      "kind": "templated",
+      "source_start": 174,
+      "source_end": 186,
+      "rendered_start": 162,
+      "rendered_end": 163
+    },
+    {
+      "kind": "macro",
+      "source_start": 174,
+      "source_end": 186,
+      "rendered_start": 162,
+      "rendered_end": 163
+    },
+    {
+      "kind": "block_start",
+      "source_start": 186,
+      "source_end": 208,
+      "rendered_start": 163,
+      "rendered_end": 163
+    },
+    {
+      "kind": "block_end",
+      "source_start": 209,
+      "source_end": 220,
+      "rendered_start": 163,
+      "rendered_end": 163
+    },
+    {
+      "kind": "macro",
+      "source_start": 186,
+      "source_end": 220,
+      "rendered_start": 163,
+      "rendered_end": 163
+    },
+    {
+      "kind": "literal",
+      "source_start": 220,
+      "source_end": 225,
+      "rendered_start": 163,
+      "rendered_end": 168
+    },
+    {
+      "kind": "block_end",
+      "source_start": 225,
+      "source_end": 237,
+      "rendered_start": 168,
+      "rendered_end": 168
+    },
+    {
+      "kind": "macro",
+      "source_start": 11,
+      "source_end": 237,
+      "rendered_start": 11,
+      "rendered_end": 168
+    }
+  ]
+}
